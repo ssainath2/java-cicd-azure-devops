@@ -27,6 +27,9 @@ stages:
       vmImage: $(vmImageName)
     
     steps:
+    - task: WhiteSource@21
+      inputs:
+        projectName: 'BTwhite'
     - task: Maven@3
       displayName: 'Maven Package'
       inputs:
